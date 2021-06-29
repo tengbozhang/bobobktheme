@@ -32,7 +32,6 @@
 <a href="/nansheng/" title="男生头像">男生头像</a>
 <a href="/fengjing/" title="风景头像">风景头像</a>
 <a href="/dongman/" title="动漫头像">动漫头像</a>
-<a href="https://m.zfn9.com/fenlei.html" class="moreup">更多<i></i></a>
 </div>
 </div>
 <script type="text/javascript">

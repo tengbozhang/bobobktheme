@@ -330,7 +330,7 @@ body{background:#f4f4f4;margin:0 auto;max-width: 640px;}
 .cl:after{clear:both;content:".";display:block;margin:0;padding:0;font-size:0;height:0;line-height:0;overflow:hidden;}
 .megx_t{margin-bottom: 6px;overflow: hidden; border-radius: 4px;}
 .ztList {padding-top:10px;background-color: #fff;}
-.ztList a{ text-align: center;float: left;width: 25%;color: #606160;padding: 3px 0;margin-bottom: 5px;text-align:center;overflow:hidden; white-space:nowrap; overflow:hidden;}
+.ztList a{ text-align: center;float: left;width: 33%;color: #606160;padding: 3px 0;margin-bottom: 5px;text-align:center;overflow:hidden; white-space:nowrap; overflow:hidden;}
 .ztList a.cur{color: #fff;background: #F85D90;    -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;}

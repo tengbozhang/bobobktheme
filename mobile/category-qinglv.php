@@ -21,7 +21,7 @@
 <div class="m-hd m-index-head f-flex">
 <a href="http://m.zfn9.com/fenlei.html" class="u-index-user" title="头像分类导航"></a>
 <a href="http://m.zfn9.com/" class="u-index-logo" title="好看头像网"></a>
-<a href="http://m.zfn9.com/search.html" class="u-index-search"></a>
+<a href="https://cse.google.com/cse?cx=90800a68a144797db" class="u-index-search"></a>
 </div>
 </div>
 <div class="megx_t">
@@ -32,7 +32,6 @@
 <a href="/nansheng/" title="男生头像">男生头像</a>
 <a href="/fengjing/" title="风景头像">风景头像</a>
 <a href="/dongman/" title="动漫头像">动漫头像</a>
-<a href="https://m.zfn9.com/fenlei.html" class="moreup">更多<i></i></a>
 </div>
 </div>
 <script type="text/javascript">

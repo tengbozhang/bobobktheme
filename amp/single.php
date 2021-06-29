@@ -37,7 +37,7 @@ echo trim(wp_title('',0));if (get_query_var('page')) { echo '('; echo get_query_
 <div class="m-hd m-index-head f-flex">
 <a href="https://amp.zfn9.com/fenlei.html" class="u-index-user" title="头像分类导航"></a>
 <a href="https://amp.zfn9.com/" class="u-index-logo" title="好看头像网"></a>
-<a href="https://amp.zfn9.com/search.html" class="u-index-search"></a>
+<a href="https://cse.google.com/cse?cx=90800a68a144797db" class="u-index-search"></a>
 </div>
 </div>
 <?php $cate= get_the_category($post->ID)[0]->name;$catelink=  esc_html(get_category_link(get_the_category($post->ID)[0]));?>
