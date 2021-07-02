@@ -8,8 +8,9 @@
 <meta name="keywords" content="<?php single_cat_title();?>" />
 <meta name="description" content="<?php echo category_description(); ?> " />
 <meta name="applicable-device" content="pc" />
-<link rel="canonical" href="<?php  echo get_permalink();?>" />
+<link rel="canonical" href="<?php  echo str_replace("www.zfn9.com",'m.zfn9.com',home_url($_SERVER['REQUEST_URI']));?>" />
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<script data-ad-client="ca-pub-3250570391881200" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <link rel="stylesheet"  href="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet"  href="/style.css">
 </head>

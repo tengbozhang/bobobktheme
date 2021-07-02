@@ -215,6 +215,7 @@ function  rvm2_tag_cloud(){
                  }
           $output .="</div>";
           echo $output;  
+          wp_reset_query();
 
 }
 

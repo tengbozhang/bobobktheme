@@ -13,18 +13,20 @@
 echo trim(wp_title('',0));if (get_query_var('page')) { echo '('; echo get_query_var('page'); echo ')';} ?>" />
     <meta name="description" content="好看头像(<?Php echo $_SERVER['HTTP_HOST'];?>)收录海量微信头像,QQ头像,微博头像,论坛头像,情侣头像,男生头像,女生头像,风景头像,动漫头像,头像图片,是你找寻个性独特头像的最佳场所" />
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="https://amp.zfn9.com/" />
+    <link rel="canonical" href="<?php echo str_replace("amp.zfn9.com",'m.zfn9.com',home_url($_SERVER['REQUEST_URI']));?>" />
     <link rel="shortcut icon" href="https://amp.zfn9.com/favicon.ico" />
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+    <amp-auto-ads type="adsense" data-ad-client="ca-pub-3250570391881200"></amp-auto-ads>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 <amp-analytics type="gtag" data-credentials="include">
 <script type="application/json">
 {
   "vars" : {
-    "gtag_id": "UA-118758668-16",
+    "gtag_id": "G-W7YLGFDPYN",
     "config" : {
-      "UA-118758668-16": { "groups": "default" }
+      "G-W7YLGFDPYN": { "groups": "default" }
     }
   }
 }

@@ -11,9 +11,10 @@
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <meta name="applicable-device" content="mobile" />
-<link rel="canonical" href="<?php echo get_the_permalink();?>" />
-
+<link rel="canonical" href="<?php echo home_url($_SERVER['REQUEST_URI']);?>" />
+<link rel="amphtml" href="<?php echo str_replace("m.zfn9.com",'amp.zfn9.com',home_url($_SERVER['REQUEST_URI']));?>" />
 <link rel="shortcut icon" href="https://m.zfn9.com/favicon.ico" />
+<script data-ad-client="ca-pub-3250570391881200" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <link rel="stylesheet" type="text/css" href="https://m.zfn9.com/wp-content/themes/mobile/style.css" />
 </head>
 <body>

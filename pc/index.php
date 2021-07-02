@@ -8,8 +8,9 @@
 <title><?php bloginfo('name'); ?> </title>
 <meta name="keywords" content="好看头像,微信头像,QQ头像,微博头像,论坛头像,头像图片" />
 <meta name="description" content="好看头像(<?Php echo $_SERVER['HTTP_HOST'];?>)收录海量微信头像,QQ头像,微博头像,论坛头像,情侣头像,男生头像,女生头像,风景头像,动漫头像,头像图片,是你找寻个性独特头像的最佳场所" />
-<link rel="canonical" href="<?php  echo get_permalink();?>" />
+<link rel="canonical" href="<?php  echo str_replace("www.zfn9.com",'m.zfn9.com',home_url($_SERVER['REQUEST_URI']));?>" />
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<script data-ad-client="ca-pub-3250570391881200" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <link rel="stylesheet"  href="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet"  href="/style.css">
 </head>
@@ -42,7 +43,7 @@
                              <div class="col-sm-6 col-md-3 item  text-center"><a href="<?php the_permalink();?>"><img class="img-thumbnail" src="https://img.zfn9.com/<?php
 $content=get_the_content();$content=explode("|",$content)[0];
 echo $content; ?>" alt="<?php the_title();?>"><?php the_title();?></a></div>  
-<?php endwhile;?>
+<?php endwhile;wp_reset_query();?>
                    </div>
 
 
@@ -67,6 +68,7 @@ echo $content; ?>" alt="<?php the_title();?>"><?php the_title();?></a></div>
         $output .= '<li class="page-item"><span>共['.$numpages."]页</span></li>";
         $output .= "</ul>";
         echo $output;
+        wp_reset_query();
 ?>
 
 </nav>

@@ -16,8 +16,8 @@ echo trim(wp_title('',0));if (get_query_var('page')) { echo '('; echo get_query_
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <meta name="applicable-device" content="mobile" />
-<link rel="canonical" href="<?php echo get_the_permalink();?>" />
-<link rel="amphtml" href="<?php echo str_replace("m.zfn9.com",'amp.zfn9.com',get_the_permalink());?>" />
+<link rel="canonical" href="<?php echo home_url($_SERVER['REQUEST_URI']);?>" />
+<link rel="amphtml" href="<?php echo str_replace("m.zfn9.com",'amp.zfn9.com',home_url($_SERVER['REQUEST_URI']));?>" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="stylesheet" type="text/css" href="/wp-content/themes/mobile/style.css" />
 <link rel="stylesheet" type="text/css" href="/wp-content/themes/mobile/slide.css" />

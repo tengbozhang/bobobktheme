@@ -214,7 +214,7 @@ function  tag_cloud(){
                  }
           $output .="</div></div>";
           echo $output;  
-
+          wp_reset_query();
 }
 
 ######baidu push

@@ -7,18 +7,20 @@
     <meta name="keywords" content="<?php single_cat_title();?>" />
     <meta name="description" content="<?php echo category_description(); ?> " />
     <meta name="viewport" content="width=device-width"> 
-    <link rel="canonical" href="<?php echo str_replace("amp.zfn9.com",'m.zfn9.com',get_the_permalink());?>" />
+    <link rel="canonical" href="<?php echo str_replace("amp.zfn9.com",'m.zfn9.com',home_url($_SERVER['REQUEST_URI']));?>" />
     <link rel="shortcut icon" href="https://amp.zfn9.com/favicon.ico" />
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+    <amp-auto-ads type="adsense" data-ad-client="ca-pub-3250570391881200"></amp-auto-ads>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 <amp-analytics type="gtag" data-credentials="include">
 <script type="application/json">
 {
   "vars" : {
-    "gtag_id": "UA-118758668-16",
+    "gtag_id": "G-W7YLGFDPYN",
     "config" : {
-      "UA-118758668-16": { "groups": "default" }
+      "G-W7YLGFDPYN": { "groups": "default" }
     }
   }
 }
