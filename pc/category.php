@@ -22,6 +22,12 @@
 </a></div>
   <div class="container top-navbar">
             <ul class="nav navbar navbar-expand navbar-dark flex-column flex-md-row ">
+<li class="nav-item"><a href="https://m.zfn9.com/" title="好看头像">网站首页</a></li>
+<li class="nav-item"><a href="/qinglv/" title="情侣头像">情侣头像</a></li>
+<li class="nav-item"><a href="/nvsheng/" title="女生头像">女生头像</a></li>
+<li class="nav-item"><a href="/nansheng/" title="男生头像">男生头像</a></li>
+<li class="nav-item"><a href="/fengjing/" title="风景头像">风景头像</a></li>
+<li class="nav-item"><a href="/dongman/" title="动漫头像">动漫头像</a></li>
 <?php if (function_exists(clean_custom_menus())) clean_custom_menus(); ?>
     </ul>
   </div>
