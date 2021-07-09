@@ -165,7 +165,7 @@ function  relate_post() {
                         while (have_posts()) {
                           the_post();
                          echo '<li><div class="m-pic-list"><div class="m-img-wrap"><a href="';
-                         echo get_the_permalink().'" target="_blank"><amp-img width="320" height="320" layout="responsive"  src="//img.zfn9.com/'.get_the_content().'" alt="'.get_the_title().'" title="'.get_the_title().'"></a></div>';
+                         echo get_the_permalink().'" target="_blank"><img src="//img.zfn9.com/'.get_the_content().'" alt="'.get_the_title().'" title="'.get_the_title().'"></a></div>';
                          echo '<div class="u-img-title f-elips"><a href="'.get_the_permalink().'">'.get_the_title().'</a></div></div></li>';
                          echo '';
                         }
@@ -192,7 +192,7 @@ function  like_post() {
                         while (have_posts()) {
                           the_post(); 
                           echo '<li><div class="m-pic-list"><div class="m-img-wrap"><a href="';
-                         echo get_the_permalink().'" target="_blank"><amp-img width="320" height="320" layout="responsive"  src="//img.zfn9.com/'.get_the_content().'" alt="'.get_the_title().'" title="'.get_the_title().'"></a></div>';
+                         echo get_the_permalink().'" target="_blank"><img src="//img.zfn9.com/'.get_the_content().'" alt="'.get_the_title().'" title="'.get_the_title().'"></a></div>';
                          echo '<div class="u-img-title f-elips"><a href="'.get_the_permalink().'">'.get_the_title().'</a></div></div></li>';
                          echo '';
                         }
@@ -214,10 +214,41 @@ function  tag_cloud(){
                  }
           $output .="</div></div>";
           echo $output;  
-
+          wp_reset_query();
 }
 
 ######baidu push
+#add_action('save_post', 'tingke_save_post_notify_baidu_zz', 10, 3);
+function tingke_save_post_notify_baidu_zz($post_id, $post, $update){
+ if($post->post_status != 'publish') return;
+ 
+ $baidu_zz_api_url = 'http://data.zz.baidu.com/urls?site=https://www.zfn9.com&token=l1wZlpbjMAhQhyoC';
+ //请到百度站长后台获取你的站点的专属提交链接
+ $response = wp_remote_post($baidu_zz_api_url, array(
+  'headers' => array('Accept-Encoding'=>'','Content-Type'=>'text/plain'),
+  'sslverify' => false,
+  'blocking' => false,
+  'body' => get_permalink($post_id)
+ ));
+}
+
+add_theme_support('post-thumbnails');
+function get_post_img_url($thumbnail = true)
+{
+    global $post;
+    if (has_post_thumbnail()) {
+        $domsxe = simplexml_load_string(get_the_post_thumbnail());
+        $thumbnailsrc = $domsxe->attributes()->src;
+        return $thumbnailsrc;
+    } elseif ($thumbnail) {
+        $content = $post->post_content;
+        preg_match_all('\d\d/\d\d/.+\.jpg', $content, $strResult, PREG_PATTERN_ORDER);
+        $n = count($strResult [1]);
+        if ($n > 0) {
+            return $strResult [1] [0];
+        }
+    }
+}
 
 
 

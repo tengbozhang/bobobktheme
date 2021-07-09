@@ -52,7 +52,7 @@ echo $content; ?>" alt="<?php the_title();?>"><?php the_title();?></a></div>
 <nav class="navbar  navbar-expand-sm bg-light navbar-light">
 <?php
          $numpages= $wp_query->max_num_pages;
-         global $wp;$current_url =  home_url( $wp->request );$pos = strpos($current_url , '/page');$pos=substr($current_url,0,$pos);
+         $current_url =  home_url($_SERVER['REQUEST_URI']);$pos = strpos($current_url , '/page');$pos=substr($current_url,0,$pos);
          $baseurl = $pos."/page/";
          $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $output = '<ul class="pagination align-self-center justify-content-center">';

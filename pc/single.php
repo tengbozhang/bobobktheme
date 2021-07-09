@@ -16,7 +16,29 @@ echo trim(wp_title('',0));if (get_query_var('page')) { echo '('; echo get_query_
 <meta name="description" content="<?php echo trim(wp_title('',0)); ?><?php if (get_query_var('page')) { echo '('; echo get_query_var('page'); echo ')';}?> | <?php echo get_the_category()[0]->name;?> | <?php bloginfo('name'); ?> " />
 <link rel="canonical" href="<?php  echo str_replace("www.zfn9.com",'m.zfn9.com',home_url($_SERVER['REQUEST_URI']));?>" />
 <script data-ad-client="ca-pub-3250570391881200" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<?php  include_once("head_low.php");?>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet"  href="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet"  href="/style.css">
+</head>
+<body>
+<header>
+<nav class="navbar navbar-light main-nav">
+  <div class="container">
+           <a class="navbar-brand" href="/"><img src="/logo.png" alt="好看头像"><span class="ml-1">好看头像</span>
+</a></div>
+  <div class="container top-navbar">
+            <ul class="nav navbar navbar-expand navbar-dark flex-column flex-md-row ">
+<li class="nav-item"><a href="https://m.zfn9.com/" title="好看头像">网站首页</a></li>
+<li class="nav-item"><a href="/qinglv/" title="情侣头像">情侣头像</a></li>
+<li class="nav-item"><a href="/nvsheng/" title="女生头像">女生头像</a></li>
+<li class="nav-item"><a href="/nansheng/" title="男生头像">男生头像</a></li>
+<li class="nav-item"><a href="/fengjing/" title="风景头像">风景头像</a></li>
+<li class="nav-item"><a href="/dongman/" title="动漫头像">动漫头像</a></li>
+    </ul>
+  </div>
+ </nav>
+</header>
+<main role="main">
 <?php
 while ( have_posts() ) : the_post();
 if (get_query_var('page')) { $page=intval(get_query_var('page'));} else {$page=1;}

@@ -66,8 +66,6 @@
 <?php endwhile;?>
 </ul>
 <?php
-         #global  $numpages;
-         #$page=get_query_var('page');
          $numpages= $wp_query->max_num_pages;
          $current_url =  get_the_permalink();$pos = strpos($current_url , '/page');$pos=substr($current_url,0,$pos);
          $baseurl = $pos."/page/";

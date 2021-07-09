@@ -19,9 +19,23 @@ echo trim(wp_title('',0));if (get_query_var('page')) { echo '('; echo get_query_
 <link rel="canonical" href="<?php echo home_url($_SERVER['REQUEST_URI']);?>" />
 <link rel="amphtml" href="<?php echo str_replace("m.zfn9.com",'amp.zfn9.com',home_url($_SERVER['REQUEST_URI']));?>" />
 <link rel="shortcut icon" href="/favicon.ico" />
+<script data-ad-client="ca-pub-3250570391881200" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="29ad07817fc6886640035ce4-text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="/wp-content/themes/mobile/style.css" />
 <link rel="stylesheet" type="text/css" href="/wp-content/themes/mobile/slide.css" />
 <script src="/wp-content/themes/mobile/zfn9.js"></script>
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Article",
+  "name" : "<?php echo trim(wp_title('',0));  ?>",
+  "datePublished" : "<?php echo get_the_date();?>",
+  "image" : "https://img.zfn9.com/<?php echo get_the_content();?>",
+  "articleSection" : "<?php if (get_query_var('page')) {echo get_query_var('page');}else{echo '1';} ?>",
+  "articleBody" : "<?php echo trim(wp_title('',0)); ?><?php if (get_query_var('page')) { echo '('; echo get_query_var('page'); echo ')';}?> | <?php echo get_the_category()[0]->name;?> | <?php bloginfo('name'); ?>,https://img.zfn9.com/<?php echo get_the_content();?>",
+  "url" : "<?php echo home_url($_SERVER['REQUEST_URI']);?>"
+}
+</script>
+
 </head>
 <body>
 <div class="g-head ">
@@ -39,7 +53,7 @@ if (get_query_var('page')) { $page=intval(get_query_var('page'));} else {$page=1
 <div class="mianbaoxue cl"><a href="//m.zfn9.com/">好看头像</a> &gt; <a href="<?php echo  $catelink;?>"><?php echo $cate;?></a>&gt; <?php echo the_title();?></div>
 <div class="txtList">
 <h1 class="txh1"><?php echo the_title();echo "($page/$numpages)";?></h1>
-<div class="info"><span>时间：2021-06-24 08:19</span><span>栏目：<a href="<?php echo $catelink;?>"><?php echo $cate;?></a></span><span>来源：<a href="https://m.zfn9.com/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></span></div>
+<div class="info"><span>时间：<?php the_date();?></span><span>栏目：<a href="<?php echo $catelink;?>"><?php echo $cate;?></a></span><span>来源：<a href="https://m.zfn9.com/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></span></div>
 <div class="tp_content"><p>提示：长按头像图片可放大或保存到本地</p><div class="swipebox"><img alt="<?php echo the_title();?>" src="//img.zfn9.com/<?php echo get_the_content();?>"></div><p>以上头像由好看头像整理发布，<a href="<?php echo  $catelink;?>"><?php echo $cate;?></a>频道提供丰富头像图片挑选下载。</p></div>
 </div>
 <div class="tagsL">标签：<a href="<?php echo $catelink;?>"><?php echo $cate;?></a></div>

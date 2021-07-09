@@ -19,6 +19,15 @@
 <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" ></script>
 <script src="<?php bloginfo('template_directory');?>/zh-cn-tw.js"></script>
 <script>
+(function(){
+var el = document.createElement("script");
+el.src = "https://sf1-scmcdn-tos.pstatp.com/goofy/ttzz/push.js?00d95f4824a78f49c3e04eb97d1ac07c40a2e3b165de2254ebaa196140a9271af67af8a57e4a01d800b32536e1c2964f20287e47d0d0ae5b11b9c7ce94ecc042";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+</script>
+<script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");

@@ -29,7 +29,6 @@
 <li class="nav-item"><a href="/nansheng/" title="男生头像">男生头像</a></li>
 <li class="nav-item"><a href="/fengjing/" title="风景头像">风景头像</a></li>
 <li class="nav-item"><a href="/dongman/" title="动漫头像">动漫头像</a></li>
-<?php if (function_exists(clean_custom_menus())) clean_custom_menus(); ?>
     </ul>
   </div>
  </nav>

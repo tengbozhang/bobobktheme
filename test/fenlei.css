@@ -73,7 +73,7 @@ body{background:#f4f4f4;margin:0 auto;max-width: 640px;}
 .u-t-unit{	line-height: 2rem;}
 /*index-首页*/
 	.m-index-head{padding-left:20px;padding-right: 20px;justify-content: space-between;align-items: center;height: 50px;}
-	.u-index-search,.u-index-user,.u-index-logo,.nav-ico,.u-index-hot{background-image: url(/wp-content/themes/zfn9_m/public.png);background-repeat: no-repeat;background-size: 110px 440px;}
+	.u-index-search,.u-index-user,.u-index-logo,.nav-ico,.u-index-hot{background-image: url(/wp-content/themes/mobile/public.png);background-repeat: no-repeat;background-size: 110px 440px;}
 	.u-index-search{width: 20px;height: 20px;display: block;background-size: 110px 440px;background-position: -90px -225px}
 	.u-index-user{width: 20px;height: 24px;display: block;background-size: 110px 440px;background-position: -90px -250px}
 	.u-index-logo{width: 130px;height: 24px;display: block;background-size: 178px 710px;background-position: 0 -432px;}
