@@ -19,6 +19,18 @@ echo trim(wp_title('',0));if (get_query_var('page')) { echo '('; echo get_query_
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet"  href="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet"  href="/style.css">
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Article",
+  "name" : "<?php echo trim(wp_title('',0));  ?>",
+  "datePublished" : "<?php echo get_the_date();?>",
+  "image" : "https://img.zfn9.com/<?php echo get_the_content();?>",
+  "articleSection" : "<?php if (get_query_var('page')) {echo get_query_var('page');}else{echo '1';} ?>",
+  "articleBody" : "<?php echo trim(wp_title('',0)); ?><?php if (get_query_var('page')) { echo '('; echo get_query_var('page'); echo ')';}?> | <?php echo get_the_category()[0]->name;?> | <?php bloginfo('name'); ?>,https://img.zfn9.com/<?php echo get_the_content();?>",
+  "url" : "<?php echo home_url($_SERVER['REQUEST_URI']);?>"
+}
+</script>
 </head>
 <body>
 <header>
