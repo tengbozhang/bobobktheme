@@ -32,6 +32,19 @@ echo trim(wp_title('',0));if (get_query_var('page')) { echo '('; echo get_query_
 }
 </script>
 </amp-analytics>
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Article",
+  "name" : "<?php echo trim(wp_title('',0));  ?>",
+  "headline": "<?php echo trim(wp_title('',0));?>",
+  "datePublished" : "<?php echo get_the_date();?>",
+  "image" : "https://img.zfn9.com/<?php echo get_the_content();?>",
+  "articleSection" : "<?php if (get_query_var('page')) {echo get_query_var('page');}else{echo '1';} ?>",
+  "articleBody" : "<?php echo trim(wp_title('',0)); ?><?php if (get_query_var('page')) { echo '('; echo get_query_var('page'); echo ')';}?> | <?php echo get_the_category()[0]->name;?> | <?php bloginfo('name'); ?>,https://img.zfn9.com/<?php echo get_the_content();?>",
+  "url" : "<?php echo home_url($_SERVER['REQUEST_URI']);?>"
+}
+</script>
 <?php   include 'mycss.php';?>
 </head>
 <body>
@@ -50,8 +63,8 @@ if (get_query_var('page')) { $page=intval(get_query_var('page'));} else {$page=1
 <div class="mianbaoxue cl"><a href="//m.zfn9.com/">好看头像</a> &gt; <a href="<?php echo  $catelink;?>"><?php echo $cate;?></a>&gt; <?php echo the_title();?></div>
 <div class="txtList">
 <h1 class="txh1"><?php echo the_title();echo "($page/$numpages)";?></h1>
-<div class="info"><span>时间：2021-06-24 08:19</span><span>栏目：<a href="<?php echo $catelink;?>"><?php echo $cate;?></a></span><span>来源：<a href="https://m.zfn9.com/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></span></div>
-<div class="tp_content"><p>提示：长按头像图片可放大或保存到本地</p><div class="swipebox"><amp-img width='320' height='320' layout="responsive"   alt="<?php echo the_title();?>" src="//img.zfn9.com/<?php echo get_the_content();?>"></div><p>以上头像由好看头像整理发布，<a href="<?php echo  $catelink;?>"><?php echo $cate;?></a>频道提供丰富头像图片挑选下载。</p></div>
+<div class="info"><span>时间：<?php echo get_the_date();?></span><span>栏目：<a href="<?php echo $catelink;?>"><?php echo $cate;?></a></span><span>来源：<a href="https://m.zfn9.com/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></span></div>
+<div class="tp_content"><p>提示：打开头像图片保存到本地</p><div class="swipebox"><amp-img width='320' height='320' layout="responsive"   alt="<?php echo the_title();?>" src="//img.zfn9.com/<?php echo get_the_content();?>"></div><p>以上头像由好看头像整理发布，<a href="<?php echo  $catelink;?>"><?php echo $cate;?></a>频道提供丰富头像图片挑选下载。</p></div>
 </div>
 <div class="tagsL">标签：<a href="<?php echo $catelink;?>"><?php echo $cate;?></a></div>
 <?php liangmt_wplink(); ?>

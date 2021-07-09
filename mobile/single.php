@@ -28,6 +28,7 @@ echo trim(wp_title('',0));if (get_query_var('page')) { echo '('; echo get_query_
   "@context" : "http://schema.org",
   "@type" : "Article",
   "name" : "<?php echo trim(wp_title('',0));  ?>",
+  "headline": "<?php echo trim(wp_title('',0));?>",
   "datePublished" : "<?php echo get_the_date();?>",
   "image" : "https://img.zfn9.com/<?php echo get_the_content();?>",
   "articleSection" : "<?php if (get_query_var('page')) {echo get_query_var('page');}else{echo '1';} ?>",
