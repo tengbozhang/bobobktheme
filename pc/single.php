@@ -52,6 +52,7 @@ echo trim(wp_title('',0));if (get_query_var('page')) { echo '('; echo get_query_
  </nav>
 </header>
 <main role="main">
+<?php $cate= get_the_category($post->ID)[0]->name;$catelink=  esc_html(get_category_link(get_the_category($post->ID)[0]));?>
 <?php
 while ( have_posts() ) : the_post();
 if (get_query_var('page')) { $page=intval(get_query_var('page'));} else {$page=1;}
@@ -59,7 +60,7 @@ if (get_query_var('page')) { $page=intval(get_query_var('page'));} else {$page=1
 
         <div class="mt-4 container content">
                  <h3 class="text-success text-center"><?php the_title();echo "($page/$numpages)";?></h3>
-<div class="text-center"><span>时间：<?php the_date();?></span><span>栏目：<a href="<?php echo $catelink;?>"><?php echo $cate;?></a></span><span>来源：<a href="https://m.zfn9.com/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></span></div>
+<div class="text-center"><span>时间：<?php the_date();?></span><span>浏览：<?php if(function_exists('the_views')) { the_views(); }else{echo '1';} ?></span><span>栏目：<a href="<?php echo $catelink;?>"><?php echo $cate;?></a></span><span>来源：<a href="https://m.zfn9.com/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></span></div>
                 <div class="row justify-content-center align-items-center" >
 
                                <div > <a href="//img.zfn9.com/<?php echo get_the_content();?>"><img class="img-thumbnail" src="//img.zfn9.com/<?php echo get_the_content();?>" alt="<?php the_title();?>" title="<?php the_title();?>"></a></div>
