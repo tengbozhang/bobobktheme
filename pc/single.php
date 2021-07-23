@@ -37,7 +37,7 @@ echo trim(wp_title('',0));if (get_query_var('page')) { echo '('; echo get_query_
   "datePublished" : "<?php echo get_the_date();?>",
   "image" : "https://img.zfn9.com/<?php echo get_the_content();?>",
   "articleSection" : "<?php if (get_query_var('page')) {echo get_query_var('page');}else{echo '1';} ?>",
-  "articleBody" : "<?php echo trim(wp_title('',0)); ?><?php if (get_query_var('page')) { echo '('; echo get_query_var('page'); echo ')';}?> | <?php echo get_the_category()[0]->name;?> | <?php bloginfo('name'); ?>,https://img.zfn9.com/<?php echo get_the_content();?>",
+  "articleBody" : "https://img.zfn9.com/<?php echo get_the_content();?>",
   "url" : "<?php echo home_url($_SERVER['REQUEST_URI']);?>"
 }
 </script>
