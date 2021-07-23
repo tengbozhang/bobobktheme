@@ -182,8 +182,9 @@ function liangmt_like_post() {
         if ($cats) {
                 echo '<div  class="container like"><p class="light_title">猜你喜欢</p><div class="row masonry">';
                 $args = array(
-                           'orderby' => 'rand',
-                    #      'tag' =>$tags[0],
+                          'meta_key' => 'views',
+                          'orderby' => 'meta_value_num',
+                          'order'             => 'desc',
                           'category__in' => array( $cats[0] ),
                           'post__not_in' => array( $post->ID ),
                           'showposts' => 4,

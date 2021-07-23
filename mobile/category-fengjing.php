@@ -107,7 +107,9 @@ function showuser(menu,i){
 
 <?php 
                 $args = array(
-                'orderby' => 'rand',
+                          'meta_key' => 'views',
+                          'orderby' => 'meta_value_num',
+                          'order' => 'DESC' ,
                           'showposts' => 8,
                           'ignore_sticky_posts' => 1
                   );

@@ -181,7 +181,9 @@ function  like_post() {
         if ($cats) {
                 echo '<div class="f-pd-2"><ul class="g-piclist-container">';
                 $args = array(
-                           'orderby' => 'rand',
+                          'meta_key' => 'views',
+                          'orderby' => 'meta_value_num',
+                          'order'             => 'desc',                         
                           'category__in' => array( $cats[0] ),
                           'post__not_in' => array( $post->ID ),
                           'showposts' => 8,

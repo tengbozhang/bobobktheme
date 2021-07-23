@@ -33,7 +33,6 @@
 <a href="/nansheng/" title="男生头像">男生头像</a>
 <a href="/fengjing/" title="风景头像">风景头像</a>
 <a href="/dongman/" title="动漫头像">动漫头像</a>
-<a href="https://m.zfn9.com/fenlei.html" class="moreup">更多<i></i></a>
 </div>
 </div>
 <script type="text/javascript">
@@ -62,7 +61,7 @@ function showuser(menu,i){
 </script>
 <div class="showMain">
 <ul class="navButton f-flex">
-<li class="on" id="tabone1" onClick="setTab('tabone',1,4)">最新头像</li>
+<li class="on" id="tabone1" onClick="setTab('tabone',1,4)">最新<?php single_cat_title();?></li>
 <li id="tabone2" onClick="setTab('tabone',2,4)">头像排行</li>
 </ul>
 <div>
@@ -108,7 +107,9 @@ function showuser(menu,i){
 
 <?php 
                 $args = array(
-                'orderby' => 'rand',
+                          'meta_key' => 'views',
+                          'orderby' => 'meta_value_num',
+                          'order' => 'DESC' ,
                           'showposts' => 8,
                           'ignore_sticky_posts' => 1
                   );
