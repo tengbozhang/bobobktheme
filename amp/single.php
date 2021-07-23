@@ -37,6 +37,15 @@ echo trim(wp_title('',0));if (get_query_var('page')) { echo '('; echo get_query_
   "@context" : "http://schema.org",
   "@type" : "Article",
   "name" : "<?php echo trim(wp_title('',0));  ?>",
+  "publisher": {
+    "@type": "Organization",
+    "name": "好看头像",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://amp.zfn9.com/logo.png"
+    }
+  },
+  "author": "zfn9",
   "headline": "<?php echo trim(wp_title('',0));?>",
   "datePublished" : "<?php echo get_the_date();?>",
   "image" : "https://img.zfn9.com/<?php echo get_the_content();?>",
